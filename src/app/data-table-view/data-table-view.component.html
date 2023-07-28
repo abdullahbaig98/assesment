@@ -1,0 +1,14 @@
+  <!-- data-table-view.component.html -->
+  <mat-table [dataSource]="dataSource" matSort matPaginator matFilter>
+    <!-- Define your columns here -->
+    <ng-container matColumnDef="imageUrl">
+      <mat-header-cell *matHeaderCellDef> Image </mat-header-cell>
+      <mat-cell *matCellDef="let listing"> <img [src]="listing.imageUrl" alt="Property"> </mat-cell>
+    </ng-container>
+    <!-- More columns here -->
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+  
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 50]" showFirstLastButtons></mat-paginator>

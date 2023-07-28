@@ -1,0 +1,10 @@
+<!-- card-view.component.html -->
+<mat-card *ngFor="let listing of listings" class="example-card">
+    <img [src]="listing.imageUrl" alt="Property">
+    <mat-card-content>
+      <h2>{{ listing.title }}</h2>
+      <p>{{ listing.address }}</p>
+      <!-- Display other listing details here -->
+    </mat-card-content>
+  </mat-card>
+  
